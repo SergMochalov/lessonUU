@@ -12,9 +12,9 @@ def is_prime(n):
 
 for x in range(1,end):
     is_prime(numbers[x])
-    if is_prime(numbers[x]) == True:
+    if is_prime(numbers[x]):
         primes.append(numbers[x])
-    if is_prime(numbers[x]) == False:
+    if not is_prime(numbers[x]):
         not_primes.append(numbers[x])
 
 print(primes)

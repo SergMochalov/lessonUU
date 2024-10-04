@@ -3,18 +3,19 @@ primes = []
 not_primes = []
 x=0
 end=len(numbers)
+
+def is_prime(n):
+  for i in range(2,n):
+    if (n%i) == 0:
+      return False
+  return True
+
 for x in range(1,end):
-    if numbers[x] % 2 == 0:
-        if numbers[x] == 2:
-            primes.append(numbers[x])
-        else:
-            not_primes.append(numbers[x])
-    elif numbers[x] % 3 == 0:
-        if numbers[x] == 3:
-            primes.append(numbers[x])
-        else:
-            not_primes.append(numbers[x])
-    else:
+    is_prime(numbers[x])
+    if is_prime(numbers[x]) == True:
         primes.append(numbers[x])
+    if is_prime(numbers[x]) == False:
+        not_primes.append(numbers[x])
+
 print(primes)
 print(not_primes)
